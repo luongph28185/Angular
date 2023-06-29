@@ -1,0 +1,40 @@
+<div  class="grid grid-cols-5 gap-4 mx-[70px] bg-gray-300 py-10 px-10 mb-24 ">
+    <!--sp1-->
+    <div *ngFor="let item of product" class="">
+        <div class=" rounded-lg  shadow-xl border-2 w-[250px]" >
+       <div class="flex overflow-x-scroll ...">
+        <img class="w-[200px] rounded-lg ml-6 bg-white scale-90 hover:scale-100 duration-1000 " src={{item.image}} alt="" />
+        <img class="w-[200px] rounded-lg ml-6 bg-white scale-90 hover:scale-100 duration-1000 " src={{item.image1}} alt="" />
+        <img class="w-[200px] rounded-lg ml-6 bg-white scale-90 hover:scale-100 duration-1000 " src={{item.image2}} alt="" />
+        <img class="w-[200px] rounded-lg ml-6 bg-white scale-90 hover:scale-100 duration-1000 " src={{item.image3}} alt="" />
+       </div>
+        <div class="border-2 bg-gray-200  pb-3 pl-2">
+            <a [routerLink]="['/productDetail/']" class="no-underline text-black pt-2 text-[15px]"><p class="pt-2">{{item.name}}</p></a>
+            <div class="flex space-x-3">
+                <h2 class="text-[14px] my-3  line-through text-slate-500">đ{{item.cost}}</h2>
+                 <h2 class="text-[14px] my-3 text-red-500 font-medium">đ{{item.price}}</h2>
+                
+            </div>
+           <div class="flex justify-between items-center mx-2 mb-4">
+            <div class="flex space-x-1 ">
+                <img class="w-3" src="../../../assets/star.png" alt="">
+                <img class="w-3" src="../../../assets/star.png" alt="">
+                <img class="w-3" src="../../../assets/star.png" alt="">
+                <img class="w-3" src="../../../assets/star.png" alt="">
+                <img class="w-3" src="../../../assets/star.png" alt="">
+               </div>
+               <div >
+                <p class="text-[10px]"><span>Đã bán    12,4k</span></p>
+               </div>
+               <div class="">
+                <p class="bg-red-500 rounded-full w-[40px] h-[40px] pl-1 pt-2 text-[15px] text-white">-50%</p>
+               </div>
+           </div>
+        <div class="h-[21px] bg-gray-600 rounded-lg w-full mr-4">
+            <div class="text-center h-[21px] bg-[#c90404] w-[180px] rounded-lg text-white countdown" >đã bán 125 sp</div>
+        </div>
+        </div>
+        
+        </div>
+        
+    </div>

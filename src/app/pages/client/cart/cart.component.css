@@ -1,0 +1,21 @@
+
+.image {
+    width: 200px;
+    height: 200px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    transition: linear 5s ease-out;
+  }
+  
+  .image:hover {
+    background-image: url('https://product.hstatic.net/1000306633/product/bia_deep_dive_babytee_0a60a9e789e44573a3b0b922d2d73992_grande.png');
+    
+  }
+  .image img:hover{
+    display: none;
+  }
+
+  
+  

@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="brand-logo">
+      <img class="w-[300px]" src="https://theme.hstatic.net/1000306633/1000891824/14/logo.png?v=510" alt="">
+  </div>
+  <div class="brand-title">Update Sản Phẩm</div>
+  <div class="inputs">
+    <form action="" (ngSubmit)="onHandleSubmit()" [formGroup]="productForm">
+      
+    <label>Name</label>
+    <input type="text" placeholder="name" id="name" name="name" formControlName="name" />
+    <label>Price</label>
+    <input type="text" placeholder="Price" id="price" name="price" formControlName="price" />
+    <label>cost</label>
+    <input type="text" placeholder="cost" id="cost" name="cost" formControlName="cost"/>
+    <label>image</label>
+    <input type="text" placeholder="image" id="image" name="image" formControlName="image"/>
+    <button type="submit">Update</button>
+    </form>
+  </div>
+  
+</div>

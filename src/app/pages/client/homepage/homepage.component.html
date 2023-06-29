@@ -1,0 +1,94 @@
+
+<div id="carouselExampleSlidesOnly" class="carousel slide $carousel-transition-duration:       .2s; $carousel-control-transition:        opacity .2s ease;" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <a routerLink="/products"><img src="https://theme.hstatic.net/1000306633/1000891824/14/slideshow_1.jpg?v=510" class="d-block w-100" alt="..."></a>
+      </div>
+      <div class="carousel-item">
+        <a routerLink="/products"><img src="https://theme.hstatic.net/1000306633/1000891824/14/slideshow_2.jpg?v=510" class="d-block w-100" alt="..."></a>
+      </div>
+      <div class="carousel-item">
+        <a routerLink="/products"><img src="https://theme.hstatic.net/1000306633/1000891824/14/slideshow_3.jpg?v=510" class="d-block w-100" alt="..."></a>
+      </div>
+    </div>
+  </div>
+  <div class="grid grid-cols-3 gap-4 mt-4">
+   <img src="https://theme.hstatic.net/1000306633/1000891824/14/block_home_category1_new.png?v=510" alt="">
+   <img src="https://theme.hstatic.net/1000306633/1000891824/14/block_home_category2_new.png?v=510" alt="">
+   <img src="https://theme.hstatic.net/1000306633/1000891824/14/block_home_category3_new.png?v=510" alt="">
+  </div>
+
+<h2 class="text-red-400 bg-gray-300 ml-[500px] text-center -mb-10 text-[25px] font-bold py-5 w-[500px] rounded-full mt-10">DEAL SỐC HÔM NAY</h2>
+<div class="count-down text-white">
+    <div class="timer-view flex mr-7" data-countdown="countdown" data-date="2023-05-31-00-00-00">
+        <div class="title-time text-black px-3">Kết Thúc Sau</div>
+        <div class="block-time flex space-x-1">
+            <p class="bg-gray-800 w-6 h-6">09</p>
+            <p class="pr-1">:</p>
+        </div>
+        <div class="block-time flex space-x-1">
+            <p class="bg-gray-800 w-6 h-6">09</p>
+            <p class="pr-1">:</p>
+        </div>
+        <div class="block-time flex space-x-1">
+            <p class="bg-gray-800 w-6 h-6">09</p>
+            <p class="pr-1">:</p>
+        </div>
+        <div class="block-time flex space-x-1">
+            <p class="bg-gray-800 w-6 h-6">09</p>
+            
+        </div>
+       
+    </div>
+  </div>
+<div  class="grid grid-cols-5 gap-4 mx-[70px] bg-gray-300 py-10 px-10 mb-24 ">
+    <!--sp1-->
+    <div *ngFor="let item of products" class="">
+        <div class=" rounded-lg  shadow-xl border-2 w-[250px]" >
+       <div class="flex overflow-x-scroll ...">
+        <img class="w-[200px] rounded-lg ml-6 bg-white scale-90 hover:scale-100 duration-1000 " src={{item.image}} alt="" />
+        <img class="w-[200px] rounded-lg ml-6 bg-white scale-90 hover:scale-100 duration-1000 " src={{item.image1}} alt="" />
+        <img class="w-[200px] rounded-lg ml-6 bg-white scale-90 hover:scale-100 duration-1000 " src={{item.image2}} alt="" />
+        <img class="w-[200px] rounded-lg ml-6 bg-white scale-90 hover:scale-100 duration-1000 " src={{item.image3}} alt="" />
+       </div>
+        <div class="border-2 bg-gray-200  pb-3 pl-2">
+            <a [routerLink]="['/productDetail/']" class="no-underline text-black pt-2 text-[15px]"><p class="pt-2">{{item.name}}</p></a>
+            <div class="flex space-x-3">
+                <h2 class="text-[14px] my-3  line-through text-slate-500">đ{{item.cost}}</h2>
+                 <h2 class="text-[14px] my-3 text-red-500 font-medium">đ{{item.price}}</h2>
+                
+            </div>
+           <div class="flex justify-between items-center mx-2 mb-4">
+            <div class="flex space-x-1 ">
+                <img class="w-3" src="../../../assets/star.png" alt="">
+                <img class="w-3" src="../../../assets/star.png" alt="">
+                <img class="w-3" src="../../../assets/star.png" alt="">
+                <img class="w-3" src="../../../assets/star.png" alt="">
+                <img class="w-3" src="../../../assets/star.png" alt="">
+               </div>
+               <div >
+                <p class="text-[10px]"><span>Đã bán    12,4k</span></p>
+               </div>
+               <div class="">
+                <p class="bg-red-500 rounded-full w-[40px] h-[40px] pl-1 pt-2 text-[15px] text-white">-50%</p>
+               </div>
+           </div>
+        <div class="h-[21px] bg-gray-600 rounded-lg w-full mr-4">
+            <div class="text-center h-[21px] bg-[#c90404] w-[180px] rounded-lg text-white countdown" >đã bán 125 sp</div>
+        </div>
+        </div>
+        
+        </div>
+        
+    </div>
+    
+        
+    
+    
+</div>
+<div class="wrapper-animation2">
+    <marquee direction="left" class="text-[60px] my-4 py-4 font-bold text">STREET WEAR BRAND LIMITTED</marquee>
+</div>
+
+
+

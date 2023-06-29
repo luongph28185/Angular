@@ -1,0 +1,65 @@
+<div  class="mt-[100px]">
+    <div class='grid grid-cols-4 gap-8'>
+        <div  class='col-span-3 bg-slate-100 py-5 px-3'>
+            <div >
+            <h4 class='text-center font-bold'>GIỎ HÀNG CỦA BẠN</h4>
+            <p class='font-bold my-3'>Bạn đang có 3 sản phẩm trong giỏ hàng</p>
+            <div   class='flex space-x-[150px] bg-white pt-3 px-1 border-2' *ngIf="product">
+                <img class='w-[70px] ml-4 mb-4' src={{product.image}} alt="" />
+                <span>
+                <p class='font-bold mt-[25px]'>{{product.name}}</p>
+                <p class='text-slate-400'>NÂU/S</p>
+                </span>
+                
+                <div class='flex space-x-2 mb-10'>
+                    <button>-</button>
+                    <button>1</button>
+                    <button>+</button>
+                </div>
+                <p class='mt-[25px]'>{{product.price}}</p>
+                <span class='flex'>
+                    
+                   <div class='mt-4'> 
+                   <p>Thành tiền:</p>
+                    <p class='text-red-500'>99999</p>
+                   </div>
+                    <img class='w-10 h-10 ml-10 mt-4' src="https://theme.hstatic.net/1000306633/1000891824/14/ic_close.png?v=490" alt="" />
+                </span>
+            </div>
+            </div>
+            <div class='mt-10'>
+                <div class='grid grid-cols-2 gap-8'>
+                    <div>
+                    <label class='my-4 font-bold' htmlFor="">Ghi chú đơn hàng</label><br />
+                    <textarea class="border-2" name="" id="" cols="70" rows="5"></textarea>
+                    </div>
+                    <div class='ml-6'>
+                    <p class='font-bold my-[20px]'>Chính sách Đổi/Trả</p>
+                    <p>Sản phẩm được đổi 1 lần duy nhất, không hỗ trợ trả.</p>
+                    <p>Sản phẩm còn đủ tem mác, chưa qua sử dụng.</p>
+                    <p>Sản phẩm nguyên giá được đổi trong 30 ngày</p>
+                    <p>Sản phẩm sale chỉ hỗ trợ đổi size</p>
+                    <p></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div>
+            <p class='text-right my-3 mr-3 font-bold hover:text-green-500'>Tiếp Tục Mua Hàng</p>
+        <div class='border px-4 py-4'>
+            <p class='font-bold text-[20px] border-b-2 pb-3'>Thông tin đơn hàng</p>
+            <div class='flex justify-between font-bold my-4 border-b-2 pb-3'>
+                <p>Tổng tiền:</p>
+                <p>1,260,000₫</p>
+            </div>
+            <button class='bg-black px-[70px] py-2 text-white'>Thanh Toán</button>
+        </div>
+        </div>
+    </div>
+
+    <!--d-->
+    <div class="image">
+        <img src="../../../../assets/TTL.jpg" alt="">
+    </div>
+      

@@ -1,0 +1,67 @@
+<div class="mx-4 my-[100px]" *ngIf="product">
+    <div class="grid grid-cols-4 gap-8">
+      <div class="col-span-1 mt-[120px]">
+        <p class="font-bold text-[20px]">THÔNG TIN</p>
+        <p class="my-3">{{product.description}}</p>
+        <p>
+          Vận chuyển từ 2-3 ngày <br />
+          Thiết kế và sản xuất bởi HADES.
+        </p>
+        <div class="space-x-4 mt-10">
+          <button class="hover:bg-black hover:text-white border-black border-2 px-5 py-2 rounded-lg">
+            Buy
+          </button>
+         <a (click)="navigateToCart(product._id)" routerLink="/cart"><button class="hover:bg-black text-gray-900 hover:text-white border-black border-2 px-3 py-2 rounded-lg">
+            Add to cart
+          </button></a>
+        </div>
+      </div>
+      <div class="col-span-2 -mt-7">
+        <div class="overflow-scroll ... w-[600px] h-[700px]">
+        <img class="w-[500px] mt-5" src={{product.image}} alt="" />
+        <img class="w-[500px] mt-5" src={{product.image1}} alt="" />
+        <img class="w-[500px] mt-5" src={{product.image2}} alt="" />
+        <img class="w-[500px] mt-5" src={{product.image3}} alt="" />
+        </div>
+        
+      </div>
+      <div class="mt-5">
+        <p class="font-bold text-xl">{{product.name}}</p>
+        <p class="text-slate-500 -mt-2">SKU: T40223SM</p>
+        <p class="font-bold my-6">{{product.price}}</p>
+        <p class="font-medium">Màu sắc</p>
+        <div class="space-x-3">
+          <button class="text-black bg-black px-[10px]">.</button>
+          <button class="text-red-500 bg-red-500 px-[10px]">.</button>
+          <button class="text-orange-900 bg-orange-900 px-[10px]">
+            .
+          </button>
+        </div>
+        <p class="mt-10 font-medium">Kích thước</p>
+        <div class="flex">
+          <p class="border-black hover:bg-black hover:text-white border-2 px-[28px] py-2">
+            S
+          </p>
+          <p class="border-black hover:bg-black hover:text-white border-2 px-[28px] py-2">
+            M
+          </p>
+          <p class="border-black hover:bg-black hover:text-white border-2 px-[27px] py-2">
+            L
+          </p>
+          <p class="border-black hover:bg-black hover:text-white border-2 px-[25px] py-2">
+            XL
+          </p>
+        </div>
+        <div>
+          <img
+            class="w-[1100px]"
+            src="https://file.hstatic.net/1000306633/file/basic_new_tee_8e958fc45123407e8f74b0891e3d5872.png"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+    <h2 class="font-bold text-[20px]">Sản Phẩm Tương Tự</h2>
+    <router-outlet></router-outlet>
+  </div>
+  
