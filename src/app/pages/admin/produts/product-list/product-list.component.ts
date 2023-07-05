@@ -37,6 +37,8 @@ export class ProductListComponent {
     );
   }
 
+  
+
   navigateToDetail(id: string) {
     
     this.router.navigate(['/products', id]);
@@ -65,15 +67,16 @@ export class ProductListComponent {
     }
     }
  
-    search() {
-      this.productService.searchProducts(this._keywords).subscribe(
-        data => {
-          this.searchResults = data;
-        },
-        error => {
-          console.log(error);
-        }
+    search(searchValue: string) {
+      let searchData: any = this.products?.filter((item) =>
+        item.name.toLowerCase().includes(searchValue)
       );
+      if (searchData.length > 0) {
+        this.products = searchData;
+      } else {
+        this.products = [];
+        this.mess = 'khong tim thay san pham nao';
+      }
     }
 
     // search(searchValue:string){

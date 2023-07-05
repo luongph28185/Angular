@@ -14,7 +14,7 @@
                 </button>
               </a>
                 <div  class="flex items-center justify-between border-2 p-2 rounded-xl w-[500px] ml-[50px]">
-                    <input type="text" [(ngModel)]="_keywords" (input)="search()" placeholder="search" class="ml-2 outline-none w-full" />
+                    <input type="text" ngModel (ngModelChange)="search($event)"  name="keyword" placeholder="search" class="ml-2 outline-none w-full" />
                     <ul>
                       <li *ngFor="let product of searchResults">{{ product.name }}</li>
                     </ul>
@@ -48,8 +48,8 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr  *ngFor="let item of products" class="bg-gray-100 border-b">
-                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{{+1}}</td>
+                  <tr  *ngFor="let item of products; let i = index" class="bg-gray-100 border-b">
+                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{{i+1}}</td>
                     <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
                       {{item.name}}
                     </td>
